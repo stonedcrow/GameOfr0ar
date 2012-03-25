@@ -40,7 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICell.cs" />
+    <Compile Include="ICoordinate.cs" />
+    <Compile Include="IRulesProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StandardRules.cs" />
     <Compile Include="World.cs" />
   </ItemGroup>
   <ItemGroup>
