@@ -8,7 +8,8 @@ One "type" of Coordinate per world.
 The coordinate type dictates the method of finding neighbours.
 The World is able to return a Cell given a Coordinate.
 Cells are of a type
-There is a default (e.g. "Empty") type for cells
+There is a default (e.g. "Empty") type for cells.
+Default cells will not be included in a world's cell count
 Default cells will not be persisted between ticks.
 There is a rule provider.
 Only immediate neighbours are used in rules.
