@@ -1,0 +1,17 @@
+﻿There is a World
+There are Cells in the world
+The World is able to "Tick" to calculate the next generation of cells
+The World only stores one generation
+Cells have Coordinates
+Coordinates have a non-discreet number of parts.
+One "type" of Coordinate per world.
+The coordinate type dictates the method of finding neighbours.
+The World is able to return a Cell given a Coordinate.
+Cells are of a type
+There is a default (e.g. "Empty") type for cells
+Default cells will not be persisted between ticks.
+There is a rule provider.
+Only immediate neighbours are used in rules.
+The rule provider defines the coordinate system
+The rule provider defines all possible cell types
+The rule provider constructs Cells from its definitions of coordinates and cell types

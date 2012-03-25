@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryOfLife", "LibraryOfLife\LibraryOfLife.csproj", "{E5FCACE9-C754-4D19-877D-3FD13FE4DE48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOfLife", "TestOfLife\TestOfLife.csproj", "{8C4E7A7D-62B5-4064-8943-BCECC5ACC390}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5FCACE9-C754-4D19-877D-3FD13FE4DE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FCACE9-C754-4D19-877D-3FD13FE4DE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FCACE9-C754-4D19-877D-3FD13FE4DE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FCACE9-C754-4D19-877D-3FD13FE4DE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4E7A7D-62B5-4064-8943-BCECC5ACC390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4E7A7D-62B5-4064-8943-BCECC5ACC390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4E7A7D-62B5-4064-8943-BCECC5ACC390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4E7A7D-62B5-4064-8943-BCECC5ACC390}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
