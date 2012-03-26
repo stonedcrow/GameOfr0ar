@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LibraryOfLife
 {
-    public class StandardRules
+    public class StandardRules : IRulesProvider
     {
     }
 }

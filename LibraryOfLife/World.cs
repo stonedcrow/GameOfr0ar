@@ -48,8 +48,26 @@ namespace LibraryOfLife
             return DefaultCell;
         }
 
-        #endregion // Methods
+        public void SetCell(ICoordinate coordinate, ICell cell)
+        {
+            var existing = CellAt(coordinate);
+            if (existing != DefaultCell)
+            {
+                _cells[coordinate] = cell;
+            }
+            else
+            {
+                _cells.Add(coordinate, cell);
+            }
+        }
 
+        public void Tick()
+        {
+            
+        }
+
+        #endregion // Methods
+        
     }
 
     public class DefaultCell : ICell
