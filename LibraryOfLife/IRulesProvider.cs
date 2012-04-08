@@ -7,5 +7,6 @@ namespace LibraryOfLife
 {
     public interface IRulesProvider
     {
+        Coordinate MakeCoordinate(params object[] parts);
     }
 }

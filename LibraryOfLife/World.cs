@@ -10,7 +10,7 @@ namespace LibraryOfLife
         #region Class Members
 
         private readonly ICell _defaultCell;
-        private Dictionary<ICoordinate, ICell> _cells;
+        private Dictionary<Coordinate, ICell> _cells;
         private IRulesProvider _rules;
 
         #endregion // Class Members
@@ -19,7 +19,7 @@ namespace LibraryOfLife
 
         public World()
         {
-            _cells = new Dictionary<ICoordinate, ICell>();
+            _cells = new Dictionary<Coordinate, ICell>();
             _defaultCell = new DefaultCell();
         }
 
@@ -38,7 +38,7 @@ namespace LibraryOfLife
 
         #region Methods 
 
-        public ICell CellAt(ICoordinate coord)
+        public ICell CellAt(Coordinate coord)
         {
             ICell cell;
             if (_cells.TryGetValue(coord, out cell))
@@ -48,7 +48,7 @@ namespace LibraryOfLife
             return DefaultCell;
         }
 
-        public void SetCell(ICoordinate coordinate, ICell cell)
+        public void SetCell(Coordinate coordinate, ICell cell)
         {
             var existing = CellAt(coordinate);
             if (existing != DefaultCell)
