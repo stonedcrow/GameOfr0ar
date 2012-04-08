@@ -12,7 +12,7 @@ namespace LibraryOfLife
 
         public int X { get { return _x; } }
         public int Y { get { return _y; } }
-        
+
         public StandardCoordinate(int x, int y)
         {
             _x = x;
@@ -36,6 +36,21 @@ namespace LibraryOfLife
         {
             if (!(coord is StandardCoordinate)) return false;
             return Equals(coord as StandardCoordinate);
+        }
+
+        public override IEnumerable<Coordinate> GetAdjacentCoords()
+        {
+            return new List<Coordinate>
+                       {
+                           new StandardCoordinate(_x-1, _y-1),
+                           new StandardCoordinate(_x,   _y-1),
+                           new StandardCoordinate(_x+1, _y-1),
+                           new StandardCoordinate(_x-1, _y),
+                           new StandardCoordinate(_x+1, _y),
+                           new StandardCoordinate(_x-1, _y+1),
+                           new StandardCoordinate(_x,   _y+1),
+                           new StandardCoordinate(_x+1, _y+1),
+                       };
         }
 
 

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace LibraryOfLife
 {
@@ -9,9 +6,8 @@ namespace LibraryOfLife
     {
         #region Class Members
 
-        private readonly ICell _defaultCell;
         private Dictionary<Coordinate, ICell> _cells;
-        private IRulesProvider _rules;
+        private readonly IRulesProvider _rules;
 
         #endregion // Class Members
 
@@ -19,15 +15,21 @@ namespace LibraryOfLife
 
         public World()
         {
+            _rules = new StandardRules();
             _cells = new Dictionary<Coordinate, ICell>();
-            _defaultCell = new DefaultCell();
+        }
+
+        public World(IRulesProvider rules)
+        {
+            _cells = new Dictionary<Coordinate, ICell>();
+            _rules = rules;
         }
 
         #endregion // Constructors
 
         #region Properties
 
-        public ICell DefaultCell { get { return _defaultCell; } }
+        public ICell DefaultCell { get { return _rules.DefaultCell; } }
 
         public int CellCount
         {
@@ -67,11 +69,6 @@ namespace LibraryOfLife
         }
 
         #endregion // Methods
-        
-    }
-
-    public class DefaultCell : ICell
-    {
         
     }
 }

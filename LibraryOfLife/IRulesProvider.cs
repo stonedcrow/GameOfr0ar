@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LibraryOfLife
+﻿namespace LibraryOfLife
 {
     public interface IRulesProvider
     {
         Coordinate MakeCoordinate(params object[] parts);
+        ICell DefaultCell { get; }
+        ICell GetNextGeneration(ICell central, params ICell[] adjacentCells);
     }
 }

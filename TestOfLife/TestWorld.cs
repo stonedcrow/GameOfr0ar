@@ -94,6 +94,11 @@ namespace TestOfLife
                 return other is Mock0DCoord;
             }
 
+            public override IEnumerable<Coordinate> GetAdjacentCoords()
+            {
+                return new List<Coordinate> {new Mock0DCoord()};
+            }
+
             public static int GetPartCount()
             {
                 return 0;
@@ -120,6 +125,11 @@ namespace TestOfLife
                 var other1D = other as Mock1DCoord;
                 if (other1D == null) return false;
                 return other1D._x == _x;
+            }
+
+            public override IEnumerable<Coordinate> GetAdjacentCoords()
+            {
+                return new List<Coordinate> {new Mock1DCoord(_x - 1), new Mock1DCoord(_x + 1)};
             }
 
             public static int GetPartCount()

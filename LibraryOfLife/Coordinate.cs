@@ -18,5 +18,6 @@ namespace LibraryOfLife
         }
 
         public abstract bool Equals(Coordinate other);
+        public abstract IEnumerable<Coordinate> GetAdjacentCoords();
     }
 }

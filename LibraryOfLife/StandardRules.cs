@@ -8,6 +8,13 @@ namespace LibraryOfLife
     public class StandardRules : IRulesProvider
     {
 
+        private readonly ICell _defaultCell;
+
+        public StandardRules()
+        {
+            _defaultCell = new StandardCell();
+        }
+
         public Coordinate MakeCoordinate(params object[] parts)
         {
             if (parts.Length != StandardCoordinate.GetPartCount())
@@ -22,5 +29,20 @@ namespace LibraryOfLife
             return new StandardCoordinate(x, y);
         }
 
+        public ICell DefaultCell
+        {
+            get { return _defaultCell; }
+        }
+
+        public ICell GetNextGeneration(ICell central, params ICell[] adjacentCells)
+        {
+            var liveNeighbours = adjacentCells.OfType<StandardCell>().Count(x => x.IsAlive);
+            var isAlive = ((StandardCell) central).IsAlive;
+            if (isAlive)
+            {
+                return new StandardCell(liveNeighbours >= 2 && liveNeighbours <= 3);
+            }
+            return new StandardCell(liveNeighbours == 3);
+        }
     }
 }
